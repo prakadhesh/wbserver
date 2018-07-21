@@ -12,12 +12,12 @@ service apache2 start
 #Simple HTML program 
 
 
-cat > /var/www/html/index.html <<EOD
+cat > /var/www/html/index.html << EOF
 <html>
 <h1>Hello World</h1>
 <h2>WEBSERVER1</h2>
 </html>
-EOD
+EOF
 
 #restart Apache Servive
 
