@@ -69,8 +69,11 @@ frontend http_front
 
 backend http_back
    balance roundrobin
-   server webserver1 192.168.10.2:80 check
-   server webserver2 192.168.10.3:80 check
+   cookie SERVERID insert indirect nocache
+   server webserver1 192.168.10.2:80 check cookie webserver1
+   server webserver2 192.168.10.3:80 check cookie webserver2
+  # server webserver1 192.168.10.2:80 check
+  # server webserver2 192.168.10.3:80 check
    option httpchk
 
 EOF
