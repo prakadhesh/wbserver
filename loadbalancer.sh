@@ -77,3 +77,7 @@ backend http_back
    option httpchk
 
 EOF
+
+#Service Restart
+
+service haproxy restart
