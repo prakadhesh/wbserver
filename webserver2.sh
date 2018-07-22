@@ -15,7 +15,7 @@ service apache2 start
 cat > /var/www/html/index.html << EOF
 <html>
 <h1>Hello World</h1>
-<h2>WEBSERVER2</h2>
+<p>Hostname is $(hostname)</p>
 </html>
 EOF
 
